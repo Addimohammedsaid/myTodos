@@ -1,0 +1,206 @@
+// Generale
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+  
+img {
+    width: 100%;
+}
+  
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    transition: all 100ms linear;
+}
+
+li{
+    list-style: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+ 
+input {
+    font-size: 1.2rem;
+    color: rgb(75, 75, 75);
+}
+
+// Components
+  
+.form-control {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;   
+}
+
+.form-box {
+    margin: 20px 0;
+}
+
+.form-success {
+    border: 1px solid green;
+}
+  
+.form-danger {
+    border: 1px solid red;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    padding: 15px 40px;
+    width: 50%;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.25s ease;     
+}
+
+.btn-primary{
+    background-color:  #5a36e7;
+    color: white;
+}
+
+.btn:active{
+    transform: scale(0.98);
+    filter: saturate(70%);
+}
+
+.title {
+    color: white;
+    font-size: 2.4rem;
+    font-weight: bold;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.signature {
+    margin-top: 40px;
+    text-align: center;
+    color: #333333;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    a{
+        color: skyblue;
+    }
+}
+
+.error {
+    font-size: 1rem;
+    color: #FCE100;    
+    font-weight: 500;
+    margin: 10px auto;   
+    animation: error-anim 400ms forwards ease; 
+    animation-iteration-count: 2;
+}
+
+@keyframes error-anim{
+    0%{
+        transform: scale(0.8);
+    }
+    50%{
+        transform: scale(0.4);
+    }
+    70%{
+        transform: scale(0.6);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+
+// Layouts //
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #010832;    
+}
+
+nav{
+    height: 20vh;
+}
+
+main {
+    width: 100vw;     
+}
+
+section {
+    margin: 0 auto;
+}
+
+.container {
+    text-align: center;
+    max-width: 500px;
+    width: 70%;
+}
+  
+form {
+    position: relative;
+}
+  
+form input[type=text], input[type=password] {   
+    box-shadow: 1px 1.5px 5px 0px #c8c8c8;
+}
+
+
+// Shapes //
+.logo{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .box1{
+        background-color: white;
+        height: 100px;    
+        width: 100px;
+        transform: rotate(-10deg);
+        border-radius: 5px;    
+        z-index: 1;       
+        border-radius: 5px; 
+        box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.5);
+        position: relative;
+    }
+
+    .box2{
+        background-color: springgreen;
+        background: linear-gradient( #ec9eff, #191cad);
+        height: 100px;    
+        width: 100px;
+        border-radius: 5px;
+        transform: rotate(-20deg) translate(-15px,10px); 
+        box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.5);
+        position: absolute;
+        z-index: 0;
+    }
+
+    .checkmark {
+        display: inline-block;      
+        height: 25px;
+        width: 12px;    
+        border-bottom: 7px solid #7020FA;
+        border-right: 7px solid#7020FA;      
+        transform: rotate(45deg) scale(2);
+        // box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.5);
+        position: absolute;      
+        z-index: 2;
+    }    
+}
+
+  
+
+
+

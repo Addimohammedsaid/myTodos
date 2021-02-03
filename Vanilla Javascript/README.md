@@ -1,15 +1,17 @@
-<h1 align="center">My Todo Apps 👋</h1>
-<p>
-  <a href="https://www.npmjs.com/package/todo" target="_blank">
-    <img alt="Version" src="https://img.shields.io/npm/v/todo.svg">
-  </a>
-</p>
+<h1 align="center">Todo Vanilla Javascript👋</h1>
+
 
 ```
 Une application web qui permet aux utilisateurs de créer & d'enregister des tâches (à faire).
 ```
 
-<img src="./preview.gif" style="padding :20px">
+
+**Technolgie utiliser**
+```
+- Front end : HTML & SASS
+- Backend : Javascript
+- Database : LocalStorage
+```
 
 ## Autheur
 

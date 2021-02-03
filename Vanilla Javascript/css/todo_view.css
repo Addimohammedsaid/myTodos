@@ -1,0 +1,197 @@
+#todo-form input[type=text] {
+  -webkit-box-shadow: 1px 1.5px 5px 0px #c8c8c8;
+          box-shadow: 1px 1.5px 5px 0px #c8c8c8;
+}
+
+#todo-form input[type=submit] {
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  font-size: 2rem;
+  background-color: transparent;
+  border: none;
+  color: grey;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+#todo-form input[type=submit]:hover {
+  color: #9c9c9c;
+}
+
+.container #todo-list {
+  margin-top: 40px;
+}
+
+.container #todo-list .todo-item {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.container #todo-list .todo-item .delete {
+  height: 18px;
+  width: 18px;
+  cursor: pointer;
+  position: relative;
+}
+
+.container #todo-list .todo-item .delete:before, .container #todo-list .todo-item .delete:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  height: 100%;
+  width: 4px;
+  background-color: grey;
+}
+
+.container #todo-list .todo-item .delete:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.container #todo-list .todo-item .delete:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.container #todo-list .todo-item-input {
+  padding: 18px;
+  border: none;
+  border-radius: 7px;
+  font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1.1rem;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  background-color: white;
+  color: #616161;
+  position: relative;
+}
+
+.container #todo-list input[type=submit] {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  color: grey;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none !important;
+}
+
+.container #todo-list input[type=submit]:hover {
+  color: #9c9c9c;
+}
+
+.container #todo-list .checkbox-fake {
+  width: 15px;
+  height: 15px;
+  border: 2.5px solid grey;
+  -webkit-box-shadow: 1px 0.5px 0px 0 grey;
+          box-shadow: 1px 0.5px 0px 0 grey;
+  position: absolute;
+}
+
+.container #todo-list input[type=checkbox] {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  opacity: 0;
+  z-index: 1;
+}
+
+.container #todo-list input[type=checkbox]:checked + .todo-item-input {
+  -webkit-animation-name: flip;
+          animation-name: flip;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 400ms;
+          animation-duration: 400ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 50ms;
+          animation-delay: 50ms;
+}
+
+.container #todo-list input[type=checkbox]:checked + .todo-item-input .delete:before, .container #todo-list input[type=checkbox]:checked + .todo-item-input .delete:after {
+  background-color: white;
+}
+
+.container #todo-list input[type=checkbox]:checked + .todo-item-input .checkbox-fake {
+  height: 15px;
+  width: 7.5px;
+  border-bottom: 4px solid white;
+  border-right: 4px solid white;
+  border-top: 0;
+  border-left: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: rotate(45deg) translate(3px, -5px);
+          transform: rotate(45deg) translate(3px, -5px);
+  z-index: 10;
+}
+
+.container #todo-list p {
+  padding-left: 25px;
+}
+
+@-webkit-keyframes flip {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+  }
+  100% {
+    color: white;
+    background-color: #5a36e7;
+    text-decoration: line-through;
+    opacity: 1;
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+
+@keyframes flip {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+  }
+  100% {
+    color: white;
+    background-color: #5a36e7;
+    text-decoration: line-through;
+    opacity: 1;
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+/*# sourceMappingURL=todo_view.css.map */
