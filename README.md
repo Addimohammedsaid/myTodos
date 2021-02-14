@@ -22,5 +22,5 @@ Une application web qui permet aux utilisateurs de créer & d'enregister des tâ
 <br>
 <br>
 
-Any suggetion or tips is very welcome ⭐️
+Any suggetions or tips is very welcome ⭐️
 

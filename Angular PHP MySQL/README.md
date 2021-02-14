@@ -12,20 +12,15 @@ Une application web qui permet aux utilisateurs de créer & d'enregister des tâ
 
 **Technolgie utiliser**
 ```
-- Angular
-- PHP
+- Front end : Angular
+- Backend : PHP
+- Database : MySQL
 ```
 
 
 ## Télécharger & Installer
 
 * [Installer XAMPP](https://www.apachefriends.org/download.html)
-
-## Execution
-
-* Activer les services Apach & mySQL dans le logicel XAMPP.
-
-* Entrer l'url suivant dans votre navigateur : http://localhost/app
 
 
 ## Autheur
