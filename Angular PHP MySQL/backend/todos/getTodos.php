@@ -4,7 +4,6 @@ require '../shared/config.php';
 
 if(isset($_GET['id']) && isset($_GET['category']))
 {
-
     $userid = preg_replace("#[^0-9]#",'',$_GET['id']); 
     
     $category = preg_replace("#[^0-9]#",'',$_GET['category']); 

@@ -1,0 +1,74 @@
+
+    <div class="menu" id="menu">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    
+    <main>       
+        <section id="categories" class="container">
+            <h1>My <br> Categories 🔥</h1>
+            
+            <form [formGroup]="categoryForm" (ngSubmit)="addCategory()">
+                <div class="form-box">
+                    <input type="text" placeholder="✍️ Add Category..." class="form-control" formControlName="category">                        
+                    <input type="submit" value="+">  
+                </div>                
+            </form>
+
+            <nav>
+                <ul>
+                    <li *ngFor="let category of categories"><a href="#"                        
+                        [routerLink]="['/']" [queryParams]="{category : category.id}"
+                        >{{ category.category}}</a></li>
+                </ul>
+            </nav>
+        </section>
+                
+          
+        <section id="todos" class="container">
+
+            <ng-template #empty>
+                <div>
+                    <h1>👈</h1>
+                    <p style="color:white">Add or select a category</p>
+                </div>
+            </ng-template>
+            
+            <div class="wrapper" *ngIf="category; else empty">
+            <div class="logo">
+                <div class="box1"></div>
+                <div class="checkmark"></div>
+                <div class="box2"></div>
+            </div>
+            <p class="title">Enjoy your monday ☕️</p>
+            <form id="todo-form" [formGroup]="todoForm" (ngSubmit)="addTodo()">
+                <div class="form-box">
+                    <input type="text" placeholder="✍️ Add item..." class="form-control" id="content" formControlName="content">                        
+                    <input type="submit" value="+">   
+               </div>     
+               <div *ngIf="!todoForm.valid && content.touched">
+                <div class="error"> obligatoire</div>
+              </div>            
+            </form>
+            <div>
+                <p class="signature" style="font-size: 1rem;"><a [routerLink]="['/']" (click)="deleteCategory()">Delete this Category</a></p>
+            </div>
+            <ul id="todo-list">
+                <li *ngFor="let todo of todos; index as i" class="todo-item">
+                    <input type="checkbox">
+                    <div class="todo-item-input">
+                        <div class="checkbox-fake"></div>
+                            <p>{{ todo.content }}</p>                    
+                        <a class="delete" (click)="deleteTodo(todo.id, i)"></a>
+                    </div>  
+                </li>   
+            </ul>
+            <p class="signature">Made with ❤️ by <a href="#">Addi Mohammed</a> 
+            <br> 
+            Highly Inspired by <a href="#">codemyui</a> for the UI
+            </p>
+            </div>
+        </section>
+
+    </main>

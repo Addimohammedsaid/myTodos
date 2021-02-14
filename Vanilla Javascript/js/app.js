@@ -56,3 +56,12 @@ function(e){
 // function removeError() {    
 //     document.querySelector('.alert').remove();
 // }
+
+
+document.querySelector("#menu").addEventListener('click', function (){    
+    const categories = document.getElementById("categories");
+
+    if(categories.style.display === "none"){
+        categories.style.display = "block"
+    }else categories.style.display = "none"
+});

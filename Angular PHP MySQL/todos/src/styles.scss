@@ -45,7 +45,7 @@ form input[type=text], input[type=password] {
     box-shadow: 1px 1.5px 5px 0px #c8c8c8;
 }
 
-form {               
+#categories form, #todos form {               
     input[type=text]{
         box-shadow: 1px 1.5px 5px 0px rgb(200, 200, 200);
     }

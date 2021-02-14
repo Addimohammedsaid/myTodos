@@ -1,20 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <title>Login | Todos </title>
-
-    <link rel="stylesheet" href="css/style.css">        
-
-</head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="signup.html">SignUp</a></li>
-        </ul>
-    </nav>
-    <main>       
+<main>       
         <section id="form" class="container">
             <div class="logo">
                 <div class="box1"></div>
@@ -22,12 +6,12 @@
                 <div class="box2"></div>
             </div>
             <p class="title">Welcome again 🤗</p>
-            <form action="index.html">
+            <form [formGroup]="angForm" (ngSubmit)="onSubmit()">
                 <div class="form-box">
-                     <input type="text" placeholder="✍️ Username..." class="form-control">     
+                     <input type="text" placeholder="✍️ Username..." class="form-control" formControlName="username">     
                 </div> 
                 <div class="form-box">
-                    <input type="password" placeholder="👀 Password..." class="form-control">     
+                    <input type="password" placeholder="👀 Password..." class="form-control" formControlName="password">     
                </div>    
                <div class="form-box">
                    <input type="submit" value="Login" class="btn btn-primary">
@@ -38,6 +22,4 @@
             Highly Inspired by <a href="#">codemyui</a> for the UI
             </p>
         </section>
-    </main>
-</body>
-</html>
+</main>
